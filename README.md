@@ -17,10 +17,13 @@ Dentro de los nodos se classifican en base a una jerarquia, el qual son los sigu
 2. Nodo hijo: Son los nodos que estan debajo de los padres.
 3. Nodo hermanos: Son los nodos hijos, que entre ellos se compaginan, son hermanos.
 
-<p align="center">
-      <img src="https://github.com/Roxime13/Apunts-M4/assets/97622400/696bc789-52ca-4747-90d9-832bedc7507f" alt="imagenarbolhtml">
-</p>
+![imagen](/dom-document.jpg)
+
+## Enlace de referencia para utilizar DOM en Python
+[DOM](https://www.w3schools.com/xml/dom_intro.asp)
+
 ## Ejemplo hecho en clase usando minidom con python
+
 ```
 from xml.dom import minidom
 
@@ -68,10 +71,21 @@ while continuar:
     else:
         print("Error!!!")
 ```
-# 
-## Definició
 
-## Comandes principals
+# XPath
+## Definicion
+**Xpath** o __(XML Path Language)__ es el sistema que se utiliza para navegar y consultar los elementos y atributos contenidos en la estructura de un documento XML.
+## Tipos de expresiones
+Para poder utilizarlo, hacen falta saber las expresiones para recorrer el arbol XML:
+1. `/` Nodo arrel
+2. `//` Todos los nodos que se encuentran debajo del actual
+3. `@` Atributo
+4. `<>` Elementos
+5. `.` Nodo actual
+6. `..` Nodo padre
+7. `text()` Muestra el texto del nodo
+
+
 
 ## Exemple fet a classe
 
