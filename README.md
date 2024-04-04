@@ -1,5 +1,3 @@
-# xml-python
-
 # DOM
 ## Definicion
 El **DOM** __(Document Object Model)__ es una interfaz de programación que nos permite crear, modificar y manipular documentos HTML y XML. Es una representación estructurada del documento, donde cada elemento del documento es un objeto dentro del modelo.
@@ -20,6 +18,7 @@ Dentro de los nodos se classifican en base a una jerarquia, el qual son los sigu
 ![imagen](/dom-document.jpg)
 
 ## Enlace de referencia para utilizar DOM en Python
+
 [DOM](https://www.w3schools.com/xml/dom_intro.asp)
 
 ## Ejemplo hecho en clase usando minidom con python
@@ -108,8 +107,92 @@ Para poder utilizarlo, hacen falta saber las expresiones para recorrer el arbol 
 # XSLT
 ## Definicion
 **XSLT** __(eXtensible Stylesheet Language for Transformations)__ es un lenguaje que permite aplicar una transformación a un documento XML para obtener otro documento XML, un documento HTML o un documento de texto plano.
-## Comandes principals
+## Elementos a utilizar en XSLT
 
-## Exemple fet a classe
+1. El elemento `<xsl: template>` se utilitza para crear plantillas.
+2. El elemento `<xsl: value-of>` se utilitza para extraer el valor de un nodo seleccionado.
+3. El elemento `<xsl: for-each>` nos permite hacer bucles en XSLT.
+4. El elemento `<xsl: for-each>` nos permite poner condiciones para que muestre solo aquellos datos que queremos mostrar.
+
+## Enlace de referencia para utilizar DOM en Python
+
+[XSLT](https://www.w3schools.com/xml/xsl_intro.asp)
+
+## Ejemplo hecho en clase
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+    <xsl:output method="html" indent="yes"/>
+    <xsl:template match="/horari">
+        <head>
+            <style type="text/css">
+                <xsl:for-each select="colors/color">
+                    .<xsl:value-of select="@codi"/>{background-color: <xsl:value-of select="."/>; padding: 15px; margin: 2px;}
+                </xsl:for-each>
+                body{
+                    background-color: rgb(197, 193, 193);
+                    text-align: center;
+                }
+                table{
+                    width: 100%;
+                    text-align: center;
+                    border-collapse: collapse;
+                }
+                th{
+                    background-color: rgb(150, 144, 144);
+                }
+                li{
+                    list-style-type: none;
+                    padding: 6px;
+                }
+                a{
+                    color: rgb(0,0,0);
+                }
+                img{
+                    width: 100%;
+                    height: 130px;
+                }
+            </style>
+        </head>
+        <html>
+            <body>
+                <img src="{@header}"/>
+                <table>
+                    <tr>
+                        <xsl:for-each select="setmana/dia">
+                            <th>
+                                <xsl:value-of select="@nom"/>
+                            </th>
+                        </xsl:for-each>
+                    </tr>
+                    <tr>
+                        <xsl:for-each select="setmana/dia">
+                            <td>
+                                <xsl:for-each select="modul">
+                                    <p class="{codi}">
+                                        <xsl:value-of select="codi"/>&#160;<xsl:value-of select="nom"/>
+                                    </p>
+                                </xsl:for-each>
+                            </td>
+                        </xsl:for-each>
+                    </tr>
+                </table>
+                <ul>
+                    <h1><xsl:value-of select="links/@nom"/></h1>
+                    <xsl:for-each select="links/link">
+                        <xsl:sort select="nom"/>
+                        <li>
+                            <a href="{url}">
+                                <xsl:value-of select="nom"/>
+                            </a>
+                        </li>
+                    </xsl:for-each>
+                </ul>
+            </body>
+        </html>
+    </xsl:template>
+</xsl:stylesheet>
+```
 
 Fet per Saïd Tisghiti EL Kabbouti
