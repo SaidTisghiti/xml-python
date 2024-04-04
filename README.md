@@ -1,56 +1,26 @@
 # xml-python
 
 # DOM
-## Definició
-El **DOM** __(Document Object Model)__ es una interfaz de programación que nos permite crear, modificar y manipular documentos HTML y XML. Es una representación estructurada del documento, donde cada elemento del documento es un objeto dentro del modelo. El DOM facilita el acceso y la manipulación de los elementos del documento, como etiquetas HTML, atributos y contenido.
-DOM significa Document Object Model. 
-## Api
-## Comandes principals
+## Definicion
+El **DOM** __(Document Object Model)__ es una interfaz de programación que nos permite crear, modificar y manipular documentos HTML y XML. Es una representación estructurada del documento, donde cada elemento del documento es un objeto dentro del modelo.
+## API
+Una **API** o __interfaz de programación de aplicaciones__ es un conjunto de definiciones y protocolos que se usa para diseñar e integrar el software de las aplicaciones.
+## Nodos de DOM
+Los nodos de DOM son etiquetas del cuerpo de un XML o HTML.
+Hay dos tipos de nodos, los cuales son los siguientes:
+1. Nodo de texto: Es el texto que hay dentro de las etiquetas.
+2. Nodo de elemento: Son las etiquetas donde nosotros recorremos para encontrar en el árbol del XML o HTML.
 
-## Exemple fet a classe
-```
-<?xml version="1.0" encoding="UTF-8"?>
-<universitat>
-  <persona>
-    <nom>Anna</nom>
-    <cognoms>Garcia</cognoms>
-    <edat>22</edat>
-    <assignatures>
-      <assignatura>Matemàtiques</assignatura>
-      <assignatura>Física</assignatura>
-      <assignatura>Química</assignatura>
-      <assignatura>Biologia</assignatura>
-    </assignatures>
-  </persona>
-  <persona>
-    <nom>Carles</nom>
-    <cognoms>Pérez</cognoms>
-    <edat>30</edat>
-    <assignatures>
-      <assignatura>Química</assignatura>
-      <assignatura>Biologia</assignatura>
-    </assignatures>
-  </persona>
-  <persona>
-    <nom>Marc</nom>
-    <cognoms>Ruiz</cognoms>
-    <edat>24</edat>
-    <assignatures>
-      <assignatura>Matemàtiques</assignatura>
-      <assignatura>Física</assignatura>
-      <assignatura>Química</assignatura>
-      <assignatura>Informàtica</assignatura>
-      <assignatura>Enginyeria</assignatura>
-    </assignatures>
-  </persona>
-</universitat>
-```
-# 
-## Definició
+Dentro de los nodos se classifican en base a una jerarquia, el qual son los siguientes:
 
-## Comandes principals
+1. Nodo padre: Es el principal nodo.
+2. Nodo hijo: Son los nodos que estan debajo de los padres.
+3. Nodo hermanos: Son los nodos hijos, que entre ellos se compaginan, son hermanos.
 
-## Exemple fet a classe
+<p align="center">
+      <img src="https://github.com/Roxime13/Apunts-M4/assets/97622400/696bc789-52ca-4747-90d9-832bedc7507f" alt="imagenarbolhtml">
+</p>
+## Ejemplo hecho en clase usando minidom con python
 ```
 from xml.dom import minidom
 
@@ -98,6 +68,13 @@ while continuar:
     else:
         print("Error!!!")
 ```
+# 
+## Definició
+
+## Comandes principals
+
+## Exemple fet a classe
+
 # Python
 ## Definició
 **Python** es un lenguaje de programación ampliamente utilizado en aplicaciones web, desarrollo de software, ciencia de datos y aprendizaje automático. Es un lenguaje de programación multiparadigma, lo que significa que no fuerza a los programadores a adoptar un estilo particular de programación.
