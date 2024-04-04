@@ -85,13 +85,29 @@ Para poder utilizarlo, hacen falta saber las expresiones para recorrer el arbol 
 6. `..` Nodo padre
 7. `text()` Muestra el texto del nodo
 
+![imagen](/imagen_2024-04-05_002202873.png)
 
+## Enlace de referencia para utilizar DOM en Python
 
-## Exemple fet a classe
+[XPath](https://www.w3schools.com/xml/xpath_intro.asp)
 
-# Python
-## Definició
-**Python** es un lenguaje de programación ampliamente utilizado en aplicaciones web, desarrollo de software, ciencia de datos y aprendizaje automático. Es un lenguaje de programación multiparadigma, lo que significa que no fuerza a los programadores a adoptar un estilo particular de programación.
+## Ejemplos vistos a clase
+
+`/botiga/bluray[1]` indica el primer elemento bluray.
+`//title[@idioma]` indica los titulos con atributo idioma.
+`//title[@idioma=‘cat’]` indica los titulos con atributo idioma igual a cat.
+`/botiga/bluray[preu>10]` indica todos los bluray con precio > 10.
+`/botiga/bluray[preu>10]/any` indica todos los años de los bluray con precio > 10.
+`/botiga/*/preu` indica todos los precios de los hijos de tienda.
+`//*` indica todos los elementos del documento.
+`//titol[@*]` indica todos los elementos titulo con cualquier atributo.
+`//titol | // preu` indica todos los titulos y precios del documento.
+`/botiga/bluray[2]/titol` indica el titulo del segundo bluray.
+`/botiga/bluray[position()<6]/titol` indica el titulo de los 5 primeras entradas.
+
+# XSLT
+## Definicion
+**XSLT** __(eXtensible Stylesheet Language for Transformations)__ es un lenguaje que permite aplicar una transformación a un documento XML para obtener otro documento XML, un documento HTML o un documento de texto plano.
 ## Comandes principals
 
 ## Exemple fet a classe
