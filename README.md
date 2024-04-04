@@ -107,6 +107,9 @@ Para poder utilizarlo, hacen falta saber las expresiones para recorrer el arbol 
 # XSLT
 ## Definicion
 **XSLT** __(eXtensible Stylesheet Language for Transformations)__ es un lenguaje que permite aplicar una transformación a un documento XML para obtener otro documento XML, un documento HTML o un documento de texto plano.
+
+![imagen](/xsl_transform.png)
+
 ## Elementos a utilizar en XSLT
 
 1. El elemento `<xsl: template>` se utilitza para crear plantillas.
